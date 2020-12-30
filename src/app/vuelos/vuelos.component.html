@@ -1,0 +1,22 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Vuelos</h1>
+  <mat-grid-list cols="2" rowHeight="200px">
+    <mat-grid-tile *ngFor="let vuelo of vuelos" [colspan]=1 [rowspan]=1>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Vuelo desde {{vuelo.origen}} a {{vuelo.destino}}
+          </mat-card-title>
+        </mat-card-header>
+        <hr>
+        <mat-card-content class="dashboard-card-content">
+          <div style="position: absolute; font-size: large; padding-bottom: 15px;">Fecha: {{vuelo.fecha}}</div> 
+          <br>
+          <div style="position: absolute; font-size: large; padding-top: 15px;">Hora: {{vuelo.hora}}</div>
+          <br> 
+          <div style="position: absolute; font-size: large; right: 30px; bottom: 10px; padding-bottom: 15px;">Precio: {{vuelo.precio}}€</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
