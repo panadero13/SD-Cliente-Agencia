@@ -20,7 +20,6 @@ export class VuelosComponent {
     this.serverCaller.getVuelos().subscribe(
       response => {
         this.vuelos = response;
-        console.log(this.vuelos);
       }
     )
   }
