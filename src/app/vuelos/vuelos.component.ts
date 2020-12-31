@@ -1,8 +1,10 @@
+import { Vuelo } from './../../templates/vuelo.template';
 import { ServerCallerService } from './../server-caller.service';
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs/internal/Observable';
+
 
 @Component({
   selector: 'app-vuelos',
@@ -11,7 +13,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class VuelosComponent {
   /** Based on the screen size, switch from standard to one column per row */
-  vuelos = [];
+  vuelos =  [];
 
   constructor(private breakpointObserver: BreakpointObserver,
     public serverCaller:ServerCallerService) {}
@@ -20,6 +22,9 @@ export class VuelosComponent {
     this.serverCaller.getVuelos().subscribe(
       response => {
         this.vuelos = response;
+      },
+      err => {
+        console.log(err);
       }
     )
   }

@@ -19,6 +19,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { VuelosComponent } from './vuelos/vuelos.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     VuelosComponent,
     LoginComponent,
+    RegisterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import { LoginComponent } from './login/login.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

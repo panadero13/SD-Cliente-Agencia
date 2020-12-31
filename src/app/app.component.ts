@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Agencia de Viajes';
+  user={
+    username:String,
+    password: String,
+    email:String
+  };
 }
